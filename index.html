@@ -4,94 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muster Consultants Pvt Ltd - Home</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Specific hero background for the single container */
-        .hero-home {
-            background-image: url('image_245f4d.jpg'); /* User-provided image as static background */
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            color: white;
-            padding: 8rem 0; /* Taller for home page */
-            text-align: center;
-            overflow: hidden;
-            /* Add a subtle parallax effect for depth */
-            background-attachment: fixed;
-        }
-
-        /* Hero content specific styling for better prominence */
         .hero-banner .hero-banner-overlay {
-            /* Changed to a vibrant blue-purple gradient */
-            background-color: rgba(0, 0, 0, 0.65); /* Fallback */
-            background-image: linear-gradient(to top, rgba(74, 85, 162, 0.7), rgba(129, 140, 248, 0.4)); /* Blue-purple gradient */
+            background-color: rgba(0, 0, 0, 0.65);
+            background-image: linear-gradient(to top, rgba(74, 85, 162, 0.7), rgba(129, 140, 248, 0.4));
         }
         .hero-banner h1 {
-            font-size: 4.5rem; /* Even larger and more impactful */
+            font-size: 4.5rem;
             line-height: 1.1;
             margin-bottom: 1.5rem;
-            text-shadow: 4px 4px 12px rgba(0,0,0,0.8); /* More pronounced text shadow */
-            animation: fadeInScale 1.5s ease-out forwards; /* Custom animation */
+            text-shadow: 4px 4px 12px rgba(0,0,0,0.8);
+            animation: fadeInScale 1.5s ease-out forwards;
             opacity: 0;
             transform: scale(0.9);
-            letter-spacing: 0.05em; /* Slight letter spacing for impact */
+            letter-spacing: 0.05em;
         }
         .hero-banner p {
-            font-size: 2rem; /* Larger and more readable */
+            font-size: 2rem;
             margin-bottom: 3rem;
             text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
-            animation: fadeInSlideUp 1.5s ease-out forwards; /* Custom animation */
+            animation: fadeInSlideUp 1.5s ease-out forwards;
             animation-delay: 0.5s;
             opacity: 0;
             transform: translateY(20px);
         }
         .hero-banner .cta-button {
-            animation: pulseButton 1.5s infinite ease-in-out, fadeIn 1.5s ease-out forwards; /* Pulse and fade in */
+            animation: pulseButton 1.5s infinite ease-in-out, fadeIn 1.5s ease-out forwards;
             animation-delay: 1s;
             opacity: 0;
-            font-size: 1.25rem; /* Larger button text */
-            padding: 0.9rem 2.5rem; /* More padding */
-            border: 2px solid white; /* White border for extra pop */
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4); /* Stronger button shadow */
+            font-size: 1.25rem;
+            padding: 0.9rem 2.5rem;
+            border: 2px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
         }
         .hero-banner .cta-button:hover {
-            transform: translateY(-5px) scale(1.05); /* More aggressive hover */
+            transform: translateY(-5px) scale(1.05);
             box-shadow: 0 15px 30px rgba(0,0,0,0.6);
-            background: linear-gradient(45deg, var(--primary-dark), var(--primary-color)); /* Invert gradient on hover */
-            border-color: var(--accent-color); /* Accent color border on hover */
+            background: linear-gradient(45deg, var(--primary-dark), var(--primary-color));
+            border-color: var(--accent-color);
         }
-
-
-        /* Ensure hero content is above overlay */
         .hero-banner .container {
             position: relative;
             z-index: 2;
         }
-
-        /* Custom Keyframe Animations for Hero Section */
         @keyframes fadeInScale {
             from { opacity: 0; transform: scale(0.9); }
             to { opacity: 1; transform: scale(1); }
         }
-
         @keyframes fadeInSlideUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes pulseButton {
             0% { transform: scale(1); }
             50% { transform: scale(1.03); }
             100% { transform: scale(1); }
         }
-
-        /* Enhanced What We Do Section - subtle hover effect for icons */
         .what-we-do-icon {
             transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
         }
@@ -99,8 +71,6 @@
             transform: scale(1.1);
             color: var(--primary-dark);
         }
-
-        /* Enhanced Why Choose Us Section - already defined in style.css, but including for completeness */
         .why-choose-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -115,8 +85,8 @@
             transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
             position: relative;
             overflow: hidden;
-            animation: fadeInUp 0.8s ease-out forwards; /* Added animation for initial load */
-            opacity: 0; /* Start invisible */
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
         }
         .why-choose-item:nth-child(1) { animation-delay: 0.1s; }
         .why-choose-item:nth-child(2) { animation-delay: 0.2s; }
@@ -170,7 +140,6 @@
             line-height: 1.7;
         }
 
-        /* Footer Enhancements - already defined in style.css */
         .footer-logo {
             filter: brightness(1.2);
         }
@@ -206,7 +175,6 @@
             background-color: var(--primary-dark);
         }
 
-        /* General Section Animations */
         .animated-section-heading {
             animation: fadeIn 1s ease-out forwards;
             opacity: 0;
@@ -220,7 +188,6 @@
             animation: fadeInUp 0.8s ease-out forwards;
             opacity: 0;
         }
-        /* Staggered delays for grid items */
         .animated-grid-item:nth-child(1) { animation-delay: 0.1s; }
         .animated-grid-item:nth-child(2) { animation-delay: 0.2s; }
         .animated-grid-item:nth-child(3) { animation-delay: 0.3s; }
@@ -231,15 +198,13 @@
         .animated-grid-item:nth-child(8) { animation-delay: 0.8s; }
         .animated-grid-item:nth-child(9) { animation-delay: 0.9s; }
 
-        /* Navbar animation */
         .navbar-animated {
             animation: fadeIn 0.8s ease-out forwards;
             opacity: 0;
         }
 
-        /* Clients Section specific styling (adapted to why-choose-item style) */
         .clients-section {
-            background-color: #f8f8f8; /* Light background for this section */
+            background-color: #f8f8f8;
             padding: 4rem 0;
             text-align: center;
         }
@@ -255,13 +220,13 @@
             border-radius: 1rem;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
             padding: 2.5rem;
-            text-align: center; /* Centered content for logos */
+            text-align: center;
             transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
             position: relative;
             overflow: hidden;
             animation: fadeInUp 0.8s ease-out forwards;
             opacity: 0;
-            border: 2px solid transparent; /* Add a transparent border */
+            border: 2px solid transparent;
         }
         .client-card-item::before {
             content: '';
@@ -282,18 +247,18 @@
             transform: translateY(-15px) scale(1.02);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
             background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-            border-color: var(--accent-color); /* Add accent color border on hover */
+            border-color: var(--accent-color);
         }
         .client-card-item img {
-            max-width: 150px; /* Adjust logo size within the card */
+            max-width: 150px;
             height: auto;
-            margin: 0 auto 1.5rem auto; /* Center image and add space below */
-            filter: grayscale(80%); /* Slightly desaturated by default */
+            margin: 0 auto 1.5rem auto;
+            filter: grayscale(80%);
             transition: filter 0.3s ease, transform 0.3s ease;
         }
         .client-card-item:hover img {
-            filter: grayscale(0%); /* Full color on hover */
-            transform: scale(1.05); /* Slight zoom on hover */
+            filter: grayscale(0%);
+            transform: scale(1.05);
         }
         .client-card-item h3 {
             color: var(--text-dark);
@@ -306,7 +271,6 @@
             line-height: 1.6;
             font-size: 0.95rem;
         }
-        /* Staggered animation delays for client cards */
         .client-card-item:nth-child(1) { animation-delay: 0.1s; }
         .client-card-item:nth-child(2) { animation-delay: 0.2s; }
         .client-card-item:nth-child(3) { animation-delay: 0.3s; }
@@ -314,20 +278,17 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Navbar -->
     <nav class="bg-white shadow-lg py-4 navbar-animated">
         <div class="container mx-auto flex justify-between items-center px-6 md:px-12">
             <div class="flex items-center">
-                <!-- Muster Logo -->
-                <img src="logo.jpg" alt="Muster Consultants Logo" class="h-16 mr-4 rounded-md"> <!-- Increased height to h-16 -->
-                <a href="home.html" class="text-primary-color font-bold text-xl tracking-wide">Muster Consultants<br> Pvt Ltd</a>
+                <img src="logo.jpg" alt="Muster Consultants Logo" class="h-16 mr-4 rounded-md">
+                <a href="index.html" class="text-primary-color font-bold text-xl tracking-wide">Muster Consultants<br> Pvt Ltd</a>
             </div>
-            <!-- Desktop Nav -->
             <div class="hidden md:flex flex-row space-x-6">
-                <a href="home.html" class="text-primary-color font-medium nav-link">HOME</a>
+                <a href="index.html" class="text-primary-color font-medium nav-link">HOME</a>
                 <a href="about.html" class="text-gray-700 hover:text-primary-color font-medium nav-link">ABOUT US</a>
                 <div class="relative group">
-                    <a href="#" class="text-gray-700 hover:text-primary-color font-medium nav-link inline-flex items-center">SERVICES</a>
+                    <a href="leadership_hiring.html" class="text-gray-700 hover:text-primary-color font-medium nav-link inline-flex items-center">SERVICES</a>
                     <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200 z-50">
                         <a href="leadership_hiring.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary-color nav-link">Leadership Hiring</a>
                         <a href="rpo.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary-color nav-link">Recruitment Process Outsourcing (RPO)</a>
@@ -342,14 +303,11 @@
                 <a href="industries_served.html" class="text-gray-700 hover:text-primary-color font-medium nav-link">INDUSTRIES SERVED</a>
                 <a href="contact.html" class="text-gray-700 hover:text-primary-color font-medium nav-link">CONTACT US</a>
             </div>
-            <!-- Hamburger Icon (Mobile) -->
             <button id="mobile-menu-toggle" class="md:hidden flex items-center px-3 py-2 border rounded text-primary-color border-primary-color focus:outline-none" aria-label="Open menu">
                 <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
-        <!-- Mobile Menu Overlay -->
         <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"></div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="fixed top-0 left-0 w-80 max-w-full h-full bg-white shadow-2xl z-50 transform -translate-x-full transition-transform duration-300 md:hidden">
             <div class="flex items-center px-6 py-4 border-b">
                 <img src="logo.jpg" alt="Muster Consultants Logo" class="h-12 w-12 rounded-md mr-3">
@@ -359,7 +317,7 @@
                 </button>
             </div>
             <nav class="flex flex-col px-6 py-4 space-y-2">
-                <a href="home.html" class="py-2 text-primary-color font-medium nav-link">HOME</a>
+                <a href="index.html" class="py-2 text-primary-color font-medium nav-link">HOME</a>
                 <a href="about.html" class="py-2 text-gray-700 hover:text-primary-color font-medium nav-link">ABOUT US</a>
                 <div class="relative">
                     <button id="mobile-services-toggle" class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-primary-color font-medium nav-link focus:outline-none">
@@ -419,24 +377,18 @@ mobileServicesToggle.addEventListener('click', function() {
 });
 </script>
 
-    <!-- Hero Section (Single Container) -->
-    <section class="hero-banner hero-home relative">
+    <section class="hero-banner hero-home relative" style="background: url('hr-banner2.jpg') center center/cover no-repeat;">
         <div class="hero-banner-overlay"></div>
-        <div class="container mx-auto relative z-10 px-6 md:px-12 py-20 hero-content">
-            <h1 class="text-4xl md:text-6xl mb-4 leading-tight">
-                HIRING <br> THE RIGHT CANDIDATE
-            </h1>
-            <p class="text-xl md:text-2xl mb-8">
-                We serve every size and type company from startups to Fortune.
-            </p>
+        <div class="container mx-auto relative z-10 px-6 md:px-12 py-24">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Welcome to Muster Consultants</h1>
+            <p class="text-lg md:text-2xl text-white mb-6">Empowering Your Business with Expert HR Solutions</p>
             <a href="about.html" class="text-white font-semibold py-3 px-8 rounded-full shadow-lg cta-button">
                 OUR COMPANY <i class="fas fa-chevron-right ml-2"></i>
             </a>
         </div>
     </section>
 
-    <!-- What We Do Section -->
-<section class="py-20 bg-gradient-to-br from-blue-100 via-white to-green-100">
+    <section class="py-20 bg-gradient-to-br from-blue-100 via-white to-green-100">
         <div class="container mx-auto px-6 md:px-12 text-center">
     <h2 class="text-3xl md:text-4xl mb-4 section-heading animated-section-heading text-gray-800 font-bold uppercase">
     What We Do?
@@ -444,6 +396,8 @@ mobileServicesToggle.addEventListener('click', function() {
     <p class="text-lg text-gray-700 mb-14 max-w-3xl mx-auto animated-paragraph">
       At <strong>Muster Consultants Pvt Ltd</strong>, we specialize in comprehensive HR solutions including Executive Search, Image Consulting, Training & Development, and Business Process Outsourcing. Our expertise spans industries and leadership levels, ensuring strategic talent solutions and sustainable organizational growth.
     </p>
+
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 <!-- Leadership Hiring -->
       <div class="relative p-10 bg-white/70 backdrop-blur-lg rounded-3xl shadow-2xl flex flex-col items-center text-center group transition-transform hover:scale-105 hover:shadow-3xl border-t-8 border-blue-400">
