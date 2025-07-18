@@ -1,0 +1,361 @@
+/* Custom CSS Variables for consistent theming */
+:root {
+    --primary-color: #16A34A; /* Green-600 */
+    --primary-dark: #15803d; /* Darker Green for hover */
+    --accent-color: #3B82F6; /* Blue for accents/borders */
+    --secondary-color: #3B82F6; /* Blue for social icons, etc. */
+    --text-dark: #1a202c; /* Dark text for headings */
+    --text-light: #4a5568; /* Lighter text for paragraphs */
+    --footer-bg-color: #2c3e50; /* Dark blue-gray for footer */
+}
+
+/* Base Body Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-light);
+    overflow-x: hidden; /* Prevent horizontal scroll on animations */
+    line-height: 1.6;
+}
+
+/* General Section Headings */
+.section-heading {
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+/* Hero Banner General Styles */
+.hero-banner {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    padding: 6rem 0; /* Default padding, overridden in specific pages */
+    text-align: center;
+    overflow: hidden;
+    background-attachment: scroll; /* Default, can be fixed for parallax */
+}
+
+.hero-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* This will be overridden by specific page hero overlays for vibrant colors */
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Call to Action Buttons (General) */
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px; /* Fully rounded */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar Styles */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Card Base Styles (for common card appearance) */
+.card-base {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-base:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Styles */
+.footer-bg {
+    background-color: var(--footer-bg-color);
+}
+
+.footer-link {
+    color: #a0aec0;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+.footer-logo {
+    filter: brightness(1.2); /* Slightly brighter logo for dark footer */
+}
+
+.footer-social-icon {
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.footer-social-icon:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.footer-subscribe-input {
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.footer-subscribe-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-subscribe-input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-subscribe-button {
+    background-color: var(--primary-color);
+    border-radius: 0 0.5rem 0.5rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.footer-subscribe-button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInSlideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseButton {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Animation Classes */
+.navbar-animated {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.animated-section-heading {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+.animated-paragraph {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.animated-grid-item {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-bounce-slow {
+    animation: bounce-slow 2s infinite ease-in-out;
+}
+
+/* Specific style for the stats/call-to-action section background */
+.stats-section {
+    background-color: var(--primary-color); /* Ensure it uses the primary color */
+}
+
+/* Enhanced Logo Slider Section Styles */
+.logo-slider-section {
+    background:blueviolet;
+    padding: 3rem 0;
+}
+.logo-slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+.logo-slider {
+    display: flex;
+    align-items: center;
+    animation: logo-scroll 40s linear infinite;
+    width: max-content;
+}
+.logo-slider-item {
+    flex: 0 0 auto;
+    margin: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 1.5rem;
+    background: white;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08);
+    padding: 1.5rem 2.5rem;
+    min-width: 180px;
+    min-height: 100px;
+}
+.logo-slider-item:hover {
+    transform: scale(1.08) translateY(-8px);
+    box-shadow: 0 8px 32px 0 rgba(16, 185, 129, 0.18);
+    background: linear-gradient(90deg, #f0fdf4 0%, #e0f2fe 100%);
+}
+.logo-slider-item img {
+    max-width: 140px;
+    max-height: 70px;
+    object-fit: contain;
+    filter: grayscale(0%);
+    transition: filter 0.3s, transform 0.3s;
+}
+.logo-slider-item:hover img {
+    filter: grayscale(0%) drop-shadow(0 2px 8px #16a34a22);
+    transform: scale(1.05);
+}
+@keyframes logo-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Responsive adjustments for general elements */
+@media (max-width: 768px) {
+    .hero-banner h1 {
+        font-size: 3rem;
+    }
+    .hero-banner p {
+        font-size: 1.25rem;
+    }
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+    .footer-subscribe-input,
+    .footer-subscribe-button {
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+    .footer-subscribe-input {
+        margin-bottom: 0.5rem;
+    }
+    .logo-slider-item {
+        margin: 0 1rem;
+        padding: 1rem 1.2rem;
+        min-width: 120px;
+        min-height: 60px;
+    }
+    .logo-slider-section {
+        padding: 2rem 0;
+    }
+    .logo-slider-item img {
+        max-width: 90px;
+        max-height: 40px;
+    }
+    #mobile-menu {
+        left: 0;
+        right: auto;
+        transform: -translateX(100%);
+    }
+    #mobile-menu.open {
+        transform: translateX(0);
+    }
+    #mobile-menu .logo {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 0.5rem;
+        margin-right: 0.75rem;
+    }
+    #mobile-menu .company-name {
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        line-height: 1.1;
+    }
+}
+
+/* Ensure dropdown menu always appears above overlays */
+.group > .absolute,
+.z-\[999\] {
+    z-index: 1050 !important;
+}
+
+/* Force hero banner overlay to always be below nav and dropdown */
+.hero-banner-overlay {
+    z-index: 1 !important;
+}
+
+nav {
+    position: relative;
+    z-index: 100;
+}
+
+#mobile-menu,
+#mobile-menu-overlay {
+    z-index: 200 !important;
+}
