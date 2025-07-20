@@ -3,106 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Other Recruitment & HR Support - Muster Consultants Pvt Ltd</title>
+    <title>Muster Consultants Pvt Ltd - Gallery</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="scr.js" defer></script>
     <style>
-        .enhanced-service-card {
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 1.25rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-            animation: fadeInUp 0.8s ease-out forwards;
+        .gallery-animated {
+            animation: fadeIn 1s ease-out forwards;
             opacity: 0;
-            padding: 2.5rem;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
         }
-        .enhanced-service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease-in-out;
+        .gallery-img {
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .enhanced-service-card:hover::before {
-            transform: scaleX(1);
-        }
-        .enhanced-service-card:hover {
-            transform: translateY(-15px) scale(1.03);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            background: linear-gradient(135deg, #f0fdf4, #e0ffe0);
-        }
-        .enhanced-service-card .icon-wrapper {
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            margin: 0 auto 1.5rem auto;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .enhanced-service-card:hover .icon-wrapper {
-            background-color: var(--primary-dark);
-            transform: rotateY(180deg);
-        }
-        .enhanced-service-card h3 {
-            color: var(--text-dark);
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        .enhanced-service-card p {
-            color: #4a5568;
-            line-height: 1.7;
-        }
-        .enhanced-service-card:nth-child(1) { animation-delay: 0.1s; }
-        .enhanced-service-card:nth-child(2) { animation-delay: 0.2s; }
-        .enhanced-service-card:nth-child(3) { animation-delay: 0.3s; }
-        .enhanced-service-card:nth-child(4) { animation-delay: 0.4s; }
-        .enhanced-service-card:nth-child(5) { animation-delay: 0.5s; }
-        .enhanced-service-card:nth-child(6) { animation-delay: 0.6s; }
-        .hero-banner .hero-banner-overlay {
-            background-color: rgba(0, 0, 0, 0.65);
-            background-image: linear-gradient(to top, rgba(74, 85, 162, 0.7), rgba(129, 140, 248, 0.4));
-        }
-        .hero-banner h1 {
-            font-size: 3.8rem;
-            line-height: 1.1;
-            margin-bottom: 1rem;
-            text-shadow: 3px 3px 10px rgba(0,0,0,0.6);
-            animation: fadeIn 1.2s ease-out forwards;
-        }
-        .hero-banner p {
-            font-size: 1.8rem;
-            margin-bottom: 2.5rem;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-            animation: fadeIn 1.2s ease-out forwards;
-            animation-delay: 0.3s;
-        }
-        .navbar-animated {
-            animation: fadeIn 0.8s ease-out forwards;
-            opacity: 0;
+        .gallery-img:hover {
+            transform: scale(1.04) rotate(-1deg);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
         }
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Navbar (copied from home.html for consistency) -->
+    <!-- Navbar (copied from contact.html for consistency) -->
     <nav class="bg-white shadow-lg py-3 sm:py-4 navbar-animated">
         <div class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-12">
             <div class="flex items-center">
@@ -110,7 +33,7 @@
                 <a href="index.html" class="text-primary-color font-bold text-lg sm:text-xl tracking-wide leading-tight">Muster Consultants<br> Pvt Ltd</a>
             </div>
             <div class="hidden md:flex flex-row space-x-4 lg:space-x-6">
-                <a href="index.html" class="text-primary-color font-medium nav-link text-sm lg:text-base">HOME</a>
+                <a href="index.html" class="text-gray-700 hover:text-primary-color font-medium nav-link text-sm lg:text-base">HOME</a>
                 <div class="relative group">
                     <a href="about.html" class="text-gray-700 hover:text-primary-color font-medium nav-link inline-flex items-center text-sm lg:text-base">ABOUT US</a>
                     <div class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200 z-50 border border-gray-100">
@@ -148,7 +71,7 @@
                 </button>
             </div>
             <nav class="flex flex-col px-6 py-4 space-y-2">
-                <a href="index.html" class="py-2 text-primary-color font-medium nav-link">HOME</a>
+                <a href="index.html" class="py-2 text-gray-700 hover:text-primary-color font-medium nav-link">HOME</a>
                 <div class="relative">
                     <button id="mobile-aboutus-toggle" class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-primary-color font-medium nav-link focus:outline-none">
                         ABOUT US
@@ -180,39 +103,79 @@
             </nav>
         </div>
     </nav>
+
     <!-- Hero Banner -->
-    <section class="hero-banner hero-home relative">
+    <section class="hero-banner hero-home relative" style="background: url('hr-banner2.jpg') center center/cover no-repeat;">
         <div class="hero-banner-overlay"></div>
-        <div class="container mx-auto relative z-10 px-6 md:px-12 py-24">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Other Recruitment & HR Support</h1>
-            <p class="text-lg md:text-2xl text-white mb-6">Comprehensive HR support and recruitment services.</p>
+        <div class="container mx-auto relative z-10 px-6 md:px-12 py-20">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Gallery</h1>
+            <p class="text-lg md:text-2xl text-white mb-6">Celebrating Moments With Our Team</p>
         </div>
     </section>
-    <main class="container mx-auto px-6 md:px-12 py-16">
-        <div class="bg-white rounded-xl shadow-lg p-8">
-            <h2 class="text-2xl font-bold mb-4">Comprehensive HR Support & Recruitment Solutions</h2>
-            <p class="mb-4">At Muster Consultants, we know that effective HR management is essential for business success. Our HR Support and Recruitment services are designed to streamline your HR operations, improve workforce efficiency, and ensure a seamless candidate experience. Whether you need help with process management, candidate logistics, or organizational insights, our team delivers tailored solutions that save you time and drive results.</p>
-            <ul class="list-disc pl-6 text-gray-700 mb-4">
-                <li><strong>Organizational Insights:</strong> Gain valuable analysis of workforce behavior, team dynamics, and HR best practices to inform your people strategy.</li>
-                <li><strong>Process Management:</strong> We structure and manage recruitment workflows, scheduling, and documentation for maximum efficiency.</li>
-                <li><strong>Candidate Logistics:</strong> From interview coordination to onboarding, we handle all logistics to ensure a smooth experience for both clients and candidates.</li>
-                <li><strong>Time-Saving Solutions:</strong> Free up your internal resources by outsourcing HR tasks to our experienced professionals.</li>
-                <li><strong>Flexible Support:</strong> Our services adapt to your business needs, whether you require ongoing HR partnership or project-based assistance.</li>
-            </ul>
-            <p class="mb-4">Our comprehensive HR support has empowered organizations to focus on growth, reduce administrative burdens, and create a positive workplace culture.</p>
-            <div class="mt-6 text-center">
-                <a href="contact.html" class="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold rounded-full shadow-lg hover:from-green-500 hover:to-blue-600 transition-all duration-300">
-                    Get Expert HR Support
-                </a>
+
+    <!-- Gallery Section with Placeholders -->
+    <section class="py-10 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="text-3xl font-bold mb-8 text-center section-heading gallery-animated">Our Memories</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 gallery-animated">
+                <!-- 12 Placeholder Slots -->
+                <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg p-6 h-64">
+                    <i class="fas fa-image text-6xl text-blue-200 mb-4"></i>
+                    <span class="text-gray-400 font-semibold">Coming Soon</span>
+                </div>
+                <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg p-6 h-64">
+                    <i class="fas fa-image text-6xl text-blue-200 mb-4"></i>
+                    <span class="text-gray-400 font-semibold">Coming Soon</span>
+                </div>
+                <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg p-6 h-64">
+                    <i class="fas fa-image text-6xl text-blue-200 mb-4"></i>
+                    <span class="text-gray-400 font-semibold">Coming Soon</span>
+                </div>
+                <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg p-6 h-64">
+                    <i class="fas fa-image text-6xl text-blue-200 mb-4"></i>
+                    <span class="text-gray-400 font-semibold">Coming Soon</span>
+                </div>
+                <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg p-6 h-64">
+                    <i class="fas fa-image text-6xl text-blue-200 mb-4"></i>
+                    <span class="text-gray-400 font-semibold">Coming Soon</span>
+                </div>
+                <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg p-6 h-64">
+                    <i class="fas fa-image text-6xl text-blue-200 mb-4"></i>
+                    <span class="text-gray-400 font-semibold">Coming Soon</span>
+                </div>
+                <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg p-6 h-64">
+                    <i class="fas fa-image text-6xl text-blue-200 mb-4"></i>
+                    <span class="text-gray-400 font-semibold">Coming Soon</span>
+                </div>
+                <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg p-6 h-64">
+                    <i class="fas fa-image text-6xl text-blue-200 mb-4"></i>
+                    <span class="text-gray-400 font-semibold">Coming Soon</span>
+                </div>
+                <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg p-6 h-64">
+                    <i class="fas fa-image text-6xl text-blue-200 mb-4"></i>
+                    <span class="text-gray-400 font-semibold">Coming Soon</span>
+                </div>
+                <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg p-6 h-64">
+                    <i class="fas fa-image text-6xl text-blue-200 mb-4"></i>
+                    <span class="text-gray-400 font-semibold">Coming Soon</span>
+                </div>
+                <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg p-6 h-64">
+                    <i class="fas fa-image text-6xl text-blue-200 mb-4"></i>
+                    <span class="text-gray-400 font-semibold">Coming Soon</span>
+                </div>
+                <div class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg p-6 h-64">
+                    <i class="fas fa-image text-6xl text-blue-200 mb-4"></i>
+                    <span class="text-gray-400 font-semibold">Coming Soon</span>
+                </div>
             </div>
         </div>
-    </main>
-    <!-- Footer (Enhanced) -->
+    </section>
+
+    <!-- Footer (copied from contact.html for consistency) -->
     <footer class="footer-bg text-white py-8 sm:py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <!-- Company Info -->
             <div class="col-span-1 animated-grid-item" style="animation-delay: 0.1s;">
-                <!-- Muster Logo -->
                 <img src="logo.jpg" alt="Muster Consultants Footer Logo" class="h-16 mb-4 rounded-md footer-logo">
                 <p class="text-gray-400 mb-4">
                     We have over 10 years of experience in connecting talent with opportunity.
@@ -265,31 +228,54 @@
             &copy; Copyright 2009 - 2017 Muster Consultants Pvt Ltd. All rights reserved. | Design by - Manvendra Mishra and Sachin kumar
         </div>
     </footer>
+
     <script>
-// Dropdown menu fix: keep open on hover, close only when mouse leaves dropdown
-  document.querySelectorAll('.group').forEach(function(group) {
-    var dropdown = group.querySelector('div.absolute');
-    var trigger = group.querySelector('a.inline-flex');
-    if (!dropdown || !trigger) return;
-    let closeTimeout;
-    function openMenu() {
-      dropdown.classList.add('group-hover:opacity-100', 'group-hover:visible');
-      dropdown.classList.remove('opacity-0', 'invisible');
-      clearTimeout(closeTimeout);
+    // Gallery upload and preview logic
+    const galleryInput = document.getElementById('gallery-input');
+    const preview = document.getElementById('preview');
+    const galleryGrid = document.getElementById('gallery-grid');
+    let galleryImages = [];
+
+    galleryInput.addEventListener('change', function(e) {
+        const files = Array.from(e.target.files);
+        preview.innerHTML = '';
+        files.forEach(file => {
+            if (!file.type.startsWith('image/')) return;
+            const reader = new FileReader();
+            reader.onload = function(ev) {
+                // Preview
+                const img = document.createElement('img');
+                img.src = ev.target.result;
+                img.className = 'w-24 h-24 object-cover rounded-lg shadow-md mr-2 mb-2 border-2 border-blue-200';
+                preview.appendChild(img);
+                // Add to gallery
+                galleryImages.push(ev.target.result);
+                renderGallery();
+            };
+            reader.readAsDataURL(file);
+        });
+    });
+
+    function renderGallery() {
+        galleryGrid.innerHTML = '';
+        galleryImages.forEach(src => {
+            const div = document.createElement('div');
+            div.className = 'overflow-hidden rounded-xl shadow-lg bg-white p-2 flex items-center justify-center';
+            const img = document.createElement('img');
+            img.src = src;
+            img.className = 'gallery-img w-full h-48 object-cover rounded-lg';
+            div.appendChild(img);
+            galleryGrid.appendChild(div);
+        });
     }
-    function closeMenu() {
-      closeTimeout = setTimeout(function() {
-        dropdown.classList.remove('group-hover:opacity-100', 'group-hover:visible');
-        dropdown.classList.add('opacity-0', 'invisible');
-      }, 150);
-    }
-    group.addEventListener('mouseenter', openMenu);
-    group.addEventListener('mouseleave', closeMenu);
-    dropdown.addEventListener('mouseenter', openMenu);
-    dropdown.addEventListener('mouseleave', closeMenu);
-    trigger.addEventListener('focus', openMenu);
-    trigger.addEventListener('blur', closeMenu);
-  });
+    // Animate gallery section
+    window.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.gallery-animated').forEach(el => {
+            el.style.opacity = 1;
+        });
+    });
+    </script>
+    <script>
 // Mobile menu toggle
 const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -315,6 +301,7 @@ function closeMobileMenu() {
 mobileMenuToggle.addEventListener('click', openMobileMenu);
 mobileMenuClose.addEventListener('click', closeMobileMenu);
 mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
 // SERVICES dropdown in mobile menu
 mobileServicesToggle.addEventListener('click', function() {
   const isOpen = !mobileServicesDropdown.classList.contains('hidden');
@@ -326,6 +313,7 @@ mobileServicesToggle.addEventListener('click', function() {
     mobileServicesCaret.classList.add('rotate-180');
   }
 });
+
 // ABOUT US dropdown in mobile menu
 mobileAboutUsToggle.addEventListener('click', function() {
   const isOpen = !mobileAboutUsDropdown.classList.contains('hidden');

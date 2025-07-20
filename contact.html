@@ -136,7 +136,13 @@
             </div>
             <div class="hidden md:flex flex-row space-x-4 lg:space-x-6">
                 <a href="index.html" class="text-primary-color font-medium nav-link text-sm lg:text-base">HOME</a>
-                <a href="about.html" class="text-gray-700 hover:text-primary-color font-medium nav-link text-sm lg:text-base">ABOUT US</a>
+                <div class="relative group">
+                    <a href="about.html" class="text-gray-700 hover:text-primary-color font-medium nav-link inline-flex items-center text-sm lg:text-base">ABOUT US</a>
+                    <div class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200 z-50 border border-gray-100">
+                        <a href="about.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary-color nav-link text-sm">About Us</a>
+                        <a href="gallery.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary-color nav-link text-sm">Gallery</a>
+                    </div>
+                </div>
                 <div class="relative group">
                     <a href="leadership_hiring.html" class="text-gray-700 hover:text-primary-color font-medium nav-link inline-flex items-center text-sm lg:text-base">SERVICES</a>
                     <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200 z-50 border border-gray-100">
@@ -168,7 +174,16 @@
             </div>
             <nav class="flex flex-col px-6 py-4 space-y-2">
                 <a href="index.html" class="py-2 text-primary-color font-medium nav-link">HOME</a>
-                <a href="about.html" class="py-2 text-gray-700 hover:text-primary-color font-medium nav-link">ABOUT US</a>
+                <div class="relative">
+                    <button id="mobile-aboutus-toggle" class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-primary-color font-medium nav-link focus:outline-none">
+                        ABOUT US
+                        <svg id="mobile-aboutus-caret" class="h-5 w-5 ml-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="mobile-aboutus-dropdown" class="hidden flex-col pl-4 space-y-1 mt-1">
+                        <a href="about.html" class="block py-2 text-gray-700 hover:text-primary-color nav-link">About Us</a>
+                        <a href="gallery.html" class="block py-2 text-gray-700 hover:text-primary-color nav-link">Gallery</a>
+                    </div>
+                </div>
                 <div class="relative">
                     <button id="mobile-services-toggle" class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-primary-color font-medium nav-link focus:outline-none">
                         SERVICES
@@ -229,7 +244,16 @@ document.querySelectorAll('.group').forEach(function(group) {
             </div>
             <nav class="flex flex-col px-6 py-4 space-y-2">
                 <a href="index.html" class="py-2 text-primary-color font-medium nav-link">HOME</a>
-                <a href="about.html" class="py-2 text-gray-700 hover:text-primary-color font-medium nav-link">ABOUT US</a>
+                <div class="relative">
+                    <button id="mobile-aboutus-toggle" class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-primary-color font-medium nav-link focus:outline-none">
+                        ABOUT US
+                        <svg id="mobile-aboutus-caret" class="h-5 w-5 ml-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="mobile-aboutus-dropdown" class="hidden flex-col pl-4 space-y-1 mt-1">
+                        <a href="about.html" class="block py-2 text-gray-700 hover:text-primary-color nav-link">About Us</a>
+                        <a href="gallery.html" class="block py-2 text-gray-700 hover:text-primary-color nav-link">Gallery</a>
+                    </div>
+                </div>
                 <div class="relative">
                     <button id="mobile-services-toggle" class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-primary-color font-medium nav-link focus:outline-none">
                         SERVICES
@@ -259,6 +283,9 @@ const mobileMenuClose = document.getElementById('mobile-menu-close');
 const mobileServicesToggle = document.getElementById('mobile-services-toggle');
 const mobileServicesDropdown = document.getElementById('mobile-services-dropdown');
 const mobileServicesCaret = document.getElementById('mobile-services-caret');
+const mobileAboutUsToggle = document.getElementById('mobile-aboutus-toggle');
+const mobileAboutUsDropdown = document.getElementById('mobile-aboutus-dropdown');
+const mobileAboutUsCaret = document.getElementById('mobile-aboutus-caret');
 
 function openMobileMenu() {
   mobileMenu.classList.remove('-translate-x-full');
@@ -284,10 +311,21 @@ mobileServicesToggle.addEventListener('click', function() {
     mobileServicesCaret.classList.add('rotate-180');
   }
 });
+// ABOUT US dropdown in mobile menu
+mobileAboutUsToggle.addEventListener('click', function() {
+  const isOpen = !mobileAboutUsDropdown.classList.contains('hidden');
+  if (isOpen) {
+    mobileAboutUsDropdown.classList.add('hidden');
+    mobileAboutUsCaret.classList.remove('rotate-180');
+  } else {
+    mobileAboutUsDropdown.classList.remove('hidden');
+    mobileAboutUsCaret.classList.add('rotate-180');
+  }
+});
 </script>
 
     <!-- Hero Banner for Contact Us -->
-    <section class="hero-banner hero-home relative" style="background: url('hr-banner.webp') center center/cover no-repeat;">
+    <section class="hero-banner hero-home relative" style="background: url('hr-banner.jpg') center center/cover no-repeat;">
         <div class="hero-banner-overlay"></div>
         <div class="container mx-auto relative z-10 px-6 md:px-12 py-24">
             <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Contact Us</h1>
@@ -328,8 +366,7 @@ mobileServicesToggle.addEventListener('click', function() {
                         <i class="fas fa-envelope text-primary-color text-2xl mr-4"></i>
                         <div>
                             <h3 class="text-xl font-semibold mb-1">Email</h3>
-                            <p class="text-gray-700">muster.hr7@gmail.com</p>
-                            <p class="text-gray-700">muster.hr5@gmail.com</p>
+                            <p class="text-gray-700">musterhrinfo@gmail.com</p>
                         </div>
                     </div>
                     <div class="flex items-center animated-paragraph" style="animation-delay: 1.1s;">
