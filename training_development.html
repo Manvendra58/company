@@ -99,65 +99,134 @@
     </nav>
     <main>
         <!-- Hero Section -->
-        <section class="hero-banner hero-home relative">
-            <div class="hero-banner-overlay"></div>
-            <div class="container mx-auto relative z-10 px-6 md:px-12 py-24">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Training & Development</h1>
-                <p class="text-lg md:text-2xl text-white mb-6">Empower your workforce with our tailored training and development programs. At Muster Consultants, we help organizations unlock their true potential through skill enhancement, leadership development, and continuous learning solutions.</p>
+        <section class="hero-banner hero-home relative" style="background: url('TRAINING.jpg') center center/cover no-repeat; min-height: 60vh; padding: 6rem 0; display: flex; align-items: center;">
+            <div class="hero-banner-overlay" style="background-color: rgba(0,0,0,0.65); background-image: linear-gradient(to top, rgba(74, 85, 162, 0.7), rgba(129, 140, 248, 0.4));"></div>
+            <div class="container mx-auto relative z-10 px-6 md:px-12 py-24 text-center">
+                <span class="inline-block bg-white bg-opacity-20 text-blue-200 px-4 py-1 rounded-full text-sm font-semibold tracking-wide mb-4 shadow-lg animate-fade-in">Empowering Your HR Journey</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg animate-fade-in">HR Practical Training with <span class="text-green-300">100% Job Guarantee</span></h1>
+                <p class="text-lg md:text-2xl text-white mb-6 max-w-2xl mx-auto animate-fade-in">Unlock your true potential with our tailored HR training programs, available in both <span class="font-bold text-yellow-300">Online</span> and <span class="font-bold text-yellow-300">Offline</span> modes. Join Muster Consultants and secure your future in HR.</p>
+                <a href="contact.html" class="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold rounded-full shadow-lg hover:from-green-500 hover:to-blue-600 transition-all duration-300 text-lg animate-bounce">Transform Your Team Today</a>
+                <div class="mt-10 animate-bounce-slow">
+                    <i class="fas fa-angle-double-down text-3xl text-white opacity-70"></i>
+                </div>
             </div>
         </section>
 
-        <!-- Features/Benefits Grid -->
-        <section id="solutions" class="py-16 bg-white">
-            <div class="container mx-auto px-6 md:px-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-10 section-heading text-center text-primary-color">Empower Your Workforce with Training & Development</h2>
-                <p class="text-lg text-gray-700 mb-8 text-center">At Muster Consultants, we believe that continuous learning is the key to organizational growth and employee satisfaction. Our Training & Development programs are designed to unlock your team’s full potential, foster leadership, and drive innovation. We offer customized solutions that address your unique business challenges and support your long-term goals.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div class="bg-blue-50 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
-                        <div class="text-5xl text-blue-500 mb-4"><i class="fas fa-chalkboard-teacher"></i></div>
-                        <h3 class="text-xl font-semibold mb-2">Leadership Development</h3>
-                        <p class="text-gray-700">Build future-ready leaders with our proven leadership and management programs, tailored to your company’s culture and vision.</p>
-                    </div>
-                    <div class="bg-green-50 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
-                        <div class="text-5xl text-green-500 mb-4"><i class="fas fa-users-cog"></i></div>
-                        <h3 class="text-xl font-semibold mb-2">Skill Enhancement</h3>
-                        <p class="text-gray-700">Upskill your teams with technical, soft skills, and industry-specific training modules that boost productivity and engagement.</p>
-                    </div>
-                    <div class="bg-yellow-50 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
-                        <div class="text-5xl text-yellow-500 mb-4"><i class="fas fa-lightbulb"></i></div>
-                        <h3 class="text-xl font-semibold mb-2">Innovation & Change</h3>
-                        <p class="text-gray-700">Drive innovation and adaptability with workshops on change management, creative thinking, and digital transformation.</p>
-                    </div>
-                    <div class="bg-purple-50 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
-                        <div class="text-5xl text-purple-500 mb-4"><i class="fas fa-user-shield"></i></div>
-                        <h3 class="text-xl font-semibold mb-2">Compliance & Ethics</h3>
-                        <p class="text-gray-700">Ensure regulatory compliance and ethical standards with targeted training sessions and real-world case studies.</p>
-                    </div>
-                    <div class="bg-pink-50 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
-                        <div class="text-5xl text-pink-500 mb-4"><i class="fas fa-comments"></i></div>
-                        <h3 class="text-xl font-semibold mb-2">Communication Excellence</h3>
-                        <p class="text-gray-700">Enhance workplace communication, collaboration, and customer service skills for a more connected and effective team.</p>
-                    </div>
-                    <div class="bg-orange-50 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
-                        <div class="text-5xl text-orange-500 mb-4"><i class="fas fa-network-wired"></i></div>
-                        <h3 class="text-xl font-semibold mb-2">Team Building</h3>
-                        <p class="text-gray-700">Foster teamwork, trust, and motivation with engaging team-building activities and experiential learning sessions.</p>
-                    </div>
+        <!-- 100% Job Guarantee Banner -->
+        <section class="py-8 bg-gradient-to-r from-green-400 via-green-500 to-green-600 text-white text-center rounded-2xl shadow-xl mx-4 md:mx-16 -mt-10 relative z-20 animate-fade-in">
+            <div class="container mx-auto px-6 md:px-12 flex flex-col items-center">
+                <div class="flex items-center justify-center mb-2">
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white bg-opacity-20 mr-3 shadow-lg"><i class="fas fa-check-circle text-3xl text-white"></i></span>
+                    <h2 class="text-2xl md:text-3xl font-bold">100% Job Guarantee</h2>
+                </div>
+                <p class="text-lg mb-2 max-w-2xl">We are so confident in our HR Practical Training programs that we offer a <span class="font-bold">100% Job Guarantee</span> upon successful completion. Your success is our mission.</p>
+                <p class="text-base">Choose between our flexible <span class="font-bold">Online</span> modules or immersive <span class="font-bold">Offline</span> workshops.</p>
             </div>
         </section>
 
-        <!-- Call to Action -->
-        <section id="cta" class="py-12 bg-gradient-to-r from-green-100 via-white to-blue-100 text-center">
+        <!-- Main Content -->
+        <section class="py-12 bg-white">
             <div class="container mx-auto px-6 md:px-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary-color">Ready to Transform Your Team?</h2>
-                <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-                    Contact us today to discuss your training and development needs. Our experts will design a program tailored to your goals and culture.
-                </p>
-                <a href="contact.html" class="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold rounded-full shadow-lg hover:from-green-500 hover:to-blue-600 transition-all duration-300">
-                    Transform Your Team Today
-                </a>
+                <!-- Needs Assessment and Program Design -->
+                <div class="mb-12 animate-fade-in-up">
+                    <div class="flex items-center mb-2">
+                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-600 font-bold mr-3 text-lg shadow">1</span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-primary-color">Needs Assessment and Program Design</h2>
+                    </div>
+                    <ul class="list-disc pl-10 text-gray-700 mb-2 space-y-2">
+                        <li><span class="font-bold text-blue-700">Identify Training Needs:</span> Conduct thorough needs assessments to understand specific skill gaps and knowledge areas where HR professionals require development. This involves surveys, interviews, and analyzing performance data.</li>
+                        <li><span class="font-bold text-blue-700">Targeted Programs:</span> Design training programs tailored to specific roles, experience levels (e.g., entry-level, mid-level, senior), and industry requirements.</li>
+                        <li><span class="font-bold text-blue-700">Define Clear Objectives:</span> Establish specific, measurable, achievable, relevant, and time-bound (SMART) learning objectives for each training program.</li>
+                        <li><span class="font-bold text-blue-700">Curriculum Development:</span> Create a comprehensive curriculum covering relevant HR functions, including recruitment, performance management, employee relations, compensation, and HRIS.</li>
+                    </ul>
+                </div>
+                <hr class="my-8 border-gray-200">
+                <!-- Practical Training and Delivery -->
+                <div class="mb-12 animate-fade-in-up">
+                    <div class="flex items-center mb-2">
+                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-600 font-bold mr-3 text-lg shadow">2</span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-primary-color">Practical Training and Delivery</h2>
+                    </div>
+                    <ul class="list-disc pl-10 text-gray-700 mb-2 space-y-2">
+                        <li><span class="font-bold text-green-700">Hands-on Experience:</span> Emphasize practical application through case studies, simulations, role-playing exercises, and real-world projects.</li>
+                        <li><span class="font-bold text-green-700">Diverse Delivery Methods:</span> Utilize a variety of training methods, such as in-person workshops, online modules, blended learning approaches, and virtual reality simulations.</li>
+                        <li><span class="font-bold text-green-700">Expert Instructors:</span> Partner with experienced HR professionals and industry experts to deliver training and share their practical insights.</li>
+                    </ul>
+                </div>
+                <hr class="my-8 border-gray-200">
+                <!-- Ongoing Evaluation and Improvement -->
+                <div class="mb-12 animate-fade-in-up">
+                    <div class="flex items-center mb-2">
+                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-600 font-bold mr-3 text-lg shadow">3</span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-primary-color">Ongoing Evaluation and Improvement</h2>
+                    </div>
+                    <ul class="list-disc pl-10 text-gray-700 mb-2 space-y-2">
+                        <li><span class="font-bold text-yellow-700">Feedback Mechanisms:</span> Implement feedback mechanisms to gather input from participants and identify areas for improvement.</li>
+                        <li><span class="font-bold text-yellow-700">Program Evaluation:</span> Regularly evaluate the effectiveness of training programs and make necessary adjustments to ensure they continue to meet the needs of HR professionals.</li>
+                        <li><span class="font-bold text-yellow-700">Continuous Improvement:</span> Foster a culture of continuous improvement within the institute by regularly updating training content, delivery methods, and resources.</li>
+                    </ul>
+                </div>
+                <hr class="my-8 border-gray-200">
+                <!-- Important Steps for Business Success -->
+                <div class="mb-12 animate-fade-in-up">
+                    <div class="flex items-center mb-2">
+                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 text-purple-600 font-bold mr-3 text-lg shadow"><i class="fas fa-lightbulb"></i></span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-primary-color">Important Steps for Business Success</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-4">
+                            <div class="flex items-start bg-blue-50 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-blue-500"><i class="fas fa-bullseye"></i></span><div><h3 class="font-bold text-lg mb-1">1. Identify Your Niche</h3><p>Target specific audiences such as BBA/MBA/PGDBM students (HR Specializations), career coaches for management students, and freshers or experienced HR professionals looking to change their profile.</p></div></div>
+                            <div class="flex items-start bg-green-50 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-green-500"><i class="fas fa-search"></i></span><div><h3 class="font-bold text-lg mb-1">2. Conduct Market Research</h3><p>Analyze market demand, competition, and trends to identify opportunities and gaps in the HR training sector.</p></div></div>
+                            <div class="flex items-start bg-yellow-50 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-yellow-500"><i class="fas fa-file-alt"></i></span><div><h3 class="font-bold text-lg mb-1">3. Develop a Business Plan</h3><p>Create a roadmap detailing the company's direction, purpose, objectives, market analysis, product/service offerings, and promotion strategies.</p></div></div>
+                            <div class="flex items-start bg-pink-50 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-pink-500"><i class="fas fa-rupee-sign"></i></span><div><h3 class="font-bold text-lg mb-1">4. Decide on Your Pricing Model</h3><p>Determine pricing based on target audience, training type, hourly rates, session/unit costs, and consider bundles or discounts. Set reasonable rates reflecting expertise.</p></div></div>
+                            <div class="flex items-start bg-orange-50 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-orange-500"><i class="fas fa-book"></i></span><div><h3 class="font-bold text-lg mb-1">5. Create Training Materials</h3><p>Develop adaptable materials like video lectures, readings, assignments, and tests. Keep them concise, engaging with visuals and audio, and include evaluations. Update regularly.</p></div></div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start bg-indigo-50 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-indigo-500"><i class="fas fa-globe"></i></span><div><h3 class="font-bold text-lg mb-1">6. Build Your Online Presence</h3><p>Establish a professional website, leverage social media, and use digital marketing to reach a wider audience and build credibility.</p></div></div>
+                            <div class="flex items-start bg-teal-50 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-teal-500"><i class="fas fa-laptop-code"></i></span><div><h3 class="font-bold text-lg mb-1">7. Utilize Technology</h3><p>Employ Learning Management Systems (LMS), video conferencing tools, course authoring tools, and online evaluation tools to enhance training quality and save time.</p></div></div>
+                            <div class="flex items-start bg-green-100 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-green-700"><i class="fas fa-rocket"></i></span><div><h3 class="font-bold text-lg mb-1">8. Launch Your Training</h3><p>Start by offering initial sessions at no or low cost to generate interest. Seek recommendations and feedback. Be flexible and open to change based on student input.</p></div></div>
+                            <div class="flex items-start bg-purple-100 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-purple-700"><i class="fas fa-hands-helping"></i></span><div><h3 class="font-bold text-lg mb-1">9. Provide Ongoing Support and Resources</h3><p>Offer post-training support and resources such as social media groups, forums, chat rooms, additional training materials, reading lists, and coaching/mentoring services.</p></div></div>
+                            <div class="flex items-start bg-yellow-100 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-yellow-700"><i class="fas fa-chart-line"></i></span><div><h3 class="font-bold text-lg mb-1">10. Measure and Improve Your Training</h3><p>Continuously evaluate and enhance training through surveys, feedback forms, and analytics. Track trainee happiness, skill retention, educational outcomes, and ROI.</p></div></div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-8 border-gray-200">
+                <!-- Company Aims / Executive Summary -->
+                <div class="mb-12 animate-fade-in-up">
+                    <div class="flex items-center mb-2">
+                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-gray-600 font-bold mr-3 text-lg shadow"><i class="fas fa-building"></i></span>
+                        <h2 class="text-2xl md:text-3xl font-bold text-primary-color">Company Aims / Executive Summary</h2>
+                    </div>
+                    <p class="text-gray-700 mb-2">Muster Consultant focuses on delivering practical, hands-on training that addresses real-world HR challenges. Our key points include conducting thorough needs assessments, developing targeted training programs, utilizing diverse delivery methods, emphasizing practical application, and building a strong reputation through quality training and positive word-of-mouth.</p>
+                    <p class="text-gray-700">We aim to effectively equip HR professionals with the skills and knowledge they need to succeed in today's dynamic business environment.</p>
+                </div>
+                <div class="text-center mt-12 animate-fade-in">
+                    <a href="contact.html" class="inline-block px-10 py-4 bg-gradient-to-r from-blue-600 to-green-500 text-white font-bold rounded-full shadow-lg hover:from-green-500 hover:to-blue-600 transition-all duration-300 text-xl animate-bounce">Get Started with Muster Consultants</a>
+                </div>
             </div>
         </section>
+
+        <style>
+        @keyframes gradient-move {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-gradient-move {
+            background-size: 200% 200%;
+            animation: gradient-move 8s ease-in-out infinite;
+        }
+        .animate-fade-in { animation: fadeIn 1.2s ease; }
+        .animate-fade-in-up { animation: fadeInUp 1.2s ease; }
+        .animate-bounce { animation: bounce 1.5s infinite; }
+        .animate-bounce-slow { animation: bounce 2.5s infinite; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px);} to { opacity: 1; transform: none; } }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        </style>
     </main>
     <!-- Footer (Enhanced) -->
     <footer class="footer-bg text-white py-8 sm:py-12">
