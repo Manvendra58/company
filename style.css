@@ -978,12 +978,12 @@ html {
 }
 
 /* Focus styles for accessibility */
-.cta-button:focus,
+/* .cta-button:focus,
 .nav-link:focus,
 .footer-link:focus {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
-}
+} */
 
 /* Loading states */
 .loading {

@@ -970,17 +970,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Focus styles for better accessibility
-        document.querySelectorAll('.cta-button, .nav-link, .footer-link').forEach(el => {
-            el.addEventListener('focus', function() {
-                this.style.outline = '2px solid var(--primary-color)';
-                this.style.outlineOffset = '2px';
-            });
-            
-            el.addEventListener('blur', function() {
-                this.style.outline = '';
-                this.style.outlineOffset = '';
-            });
-        });
+        // Remove this block to prevent programmatic focus outlines on nav links/buttons
+        // document.querySelectorAll('.cta-button, .nav-link, .footer-link').forEach(el => {
+        //     el.addEventListener('focus', function() {
+        //         this.style.outline = '2px solid var(--primary-color)';
+        //         this.style.outlineOffset = '2px';
+        //     });
+        //     el.addEventListener('blur', function() {
+        //         this.style.outline = '';
+        //         this.style.outlineOffset = '';
+        //     });
+        // });
     }
 
     // Enhanced form handling

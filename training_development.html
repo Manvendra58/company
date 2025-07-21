@@ -29,14 +29,14 @@
             <div class="hidden md:flex flex-row space-x-4 lg:space-x-6">
                 <a href="index.html" class="text-primary-color font-medium nav-link text-sm lg:text-base">HOME</a>
                 <div class="relative group">
-                    <a href="about.html" class="text-gray-700 hover:text-primary-color font-medium nav-link inline-flex items-center text-sm lg:text-base">ABOUT US</a>
+                    <a href="#" class="text-gray-700 hover:text-primary-color font-medium nav-link inline-flex items-center text-sm lg:text-base">ABOUT US</a>
                     <div class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200 z-50 border border-gray-100">
                         <a href="about.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary-color nav-link text-sm">About Us</a>
                         <a href="gallery.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary-color nav-link text-sm">Gallery</a>
                     </div>
                 </div>
                 <div class="relative group">
-                    <a href="leadership_hiring.html" class="text-gray-700 hover:text-primary-color font-medium nav-link inline-flex items-center text-sm lg:text-base">SERVICES</a>
+                    <a href="#" class="text-gray-700 hover:text-primary-color font-medium nav-link inline-flex items-center text-sm lg:text-base">SERVICES</a>
                     <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200 z-50 border border-gray-100">
                         <a href="leadership_hiring.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary-color nav-link text-sm">Leadership Hiring</a>
                         <a href="rpo.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary-color nav-link text-sm">Recruitment Process Outsourcing (RPO)</a>
@@ -69,7 +69,7 @@
                 <div class="relative">
                     <button id="mobile-aboutus-toggle" class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-primary-color font-medium nav-link focus:outline-none">
                         ABOUT US
-                        <svg id="mobile-aboutus-caret" class="h-5 w-5 ml-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg id="mobile-aboutus-caret" class="h-5 w-5 ml-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div id="mobile-aboutus-dropdown" class="hidden flex-col pl-4 space-y-1 mt-1">
                         <a href="about.html" class="block py-2 text-gray-700 hover:text-primary-color nav-link">About Us</a>
@@ -79,7 +79,7 @@
                 <div class="relative">
                     <button id="mobile-services-toggle" class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-primary-color font-medium nav-link focus:outline-none">
                         SERVICES
-                        <svg id="mobile-services-caret" class="h-5 w-5 ml-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg id="mobile-services-caret" class="h-5 w-5 ml-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div id="mobile-services-dropdown" class="hidden flex-col pl-4 space-y-1 mt-1">
                         <a href="leadership_hiring.html" class="block py-2 text-gray-700 hover:text-primary-color nav-link">Leadership Hiring</a>
@@ -211,6 +211,7 @@
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
+                <div class="hidden text-green-400 font-semibold mt-2" id="subscribe-success">Thank you for subscribing!</div>
             </div>
         </div>
         <div class="border-t border-gray-700 mt-6 sm:mt-8 pt-4 sm:pt-6 text-center text-gray-500 text-xs sm:text-sm px-4">
@@ -290,6 +291,37 @@ mobileAboutUsToggle.addEventListener('click', function() {
     mobileAboutUsCaret.classList.add('rotate-180');
   }
 });
+
+const subscribeInput = document.querySelector('.footer-subscribe-input');
+const subscribeBtn = document.querySelector('.footer-subscribe-button');
+const subscribeSuccess = document.getElementById('subscribe-success');
+if (subscribeInput && subscribeBtn) {
+    subscribeBtn.addEventListener('click', async function(e) {
+        e.preventDefault();
+        const email = subscribeInput.value.trim();
+        if (!email) {
+            alert('Please enter your email address');
+            return;
+        }
+        subscribeBtn.disabled = true;
+        try {
+            const res = await fetch('http://localhost:5000/api/subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email })
+            });
+            if (res.ok) {
+                subscribeInput.value = '';
+                subscribeSuccess.classList.remove('hidden');
+            } else {
+                alert('There was an error subscribing.');
+            }
+        } catch (err) {
+            alert('There was an error subscribing.');
+        }
+        subscribeBtn.disabled = false;
+    });
+}
 </script>
 </body>
 </html> 
