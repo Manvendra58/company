@@ -370,6 +370,7 @@ mobileAboutUsToggle.addEventListener('click', function() {
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
+                <div class="hidden text-green-400 font-semibold mt-2" id="subscribe-success">You have successfully subscribed to our newsletter!</div>
             </div>
         </div>
         <div class="border-t border-gray-700 mt-6 sm:mt-8 pt-4 sm:pt-6 text-center text-gray-500 text-xs sm:text-sm px-4">
@@ -411,7 +412,6 @@ if (subscribeInput && subscribeBtn) {
         e.preventDefault();
         const email = subscribeInput.value.trim();
         if (!email) {
-            alert('Please enter your email address');
             return;
         }
         subscribeBtn.disabled = true;
@@ -424,11 +424,8 @@ if (subscribeInput && subscribeBtn) {
             if (res.ok) {
                 subscribeInput.value = '';
                 subscribeSuccess.classList.remove('hidden');
-            } else {
-                alert('There was an error subscribing.');
             }
         } catch (err) {
-            alert('There was an error subscribing.');
         }
         subscribeBtn.disabled = false;
     });
