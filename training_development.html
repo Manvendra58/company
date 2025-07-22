@@ -16,6 +16,16 @@
             background-color: rgba(0, 0, 0, 0.65);
             background-image: linear-gradient(to top, rgba(74, 85, 162, 0.7), rgba(129, 140, 248, 0.4));
         }
+        .accordion-header {
+            transition: background-color 0.2s ease-in-out;
+        }
+        .accordion-header:hover {
+            background-color: #f9fafb; /* bg-gray-50 */
+        }
+        .accordion-item.active .accordion-header {
+            background-color: #eff6ff; /* blue-50 */
+            color: #1d4ed8; /* blue-700 */
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -125,83 +135,181 @@
         </section>
 
         <!-- Main Content -->
-        <section class="py-12 bg-white">
+        <section class="py-16 bg-gray-50">
             <div class="container mx-auto px-6 md:px-12">
-                <!-- Needs Assessment and Program Design -->
-                <div class="mb-12 animate-fade-in-up">
-                    <div class="flex items-center mb-2">
-                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-600 font-bold mr-3 text-lg shadow">1</span>
-                        <h2 class="text-2xl md:text-3xl font-bold text-primary-color">Needs Assessment and Program Design</h2>
-                    </div>
-                    <ul class="list-disc pl-10 text-gray-700 mb-2 space-y-2">
-                        <li><span class="font-bold text-blue-700">Identify Training Needs:</span> Conduct thorough needs assessments to understand specific skill gaps and knowledge areas where HR professionals require development. This involves surveys, interviews, and analyzing performance data.</li>
-                        <li><span class="font-bold text-blue-700">Targeted Programs:</span> Design training programs tailored to specific roles, experience levels (e.g., entry-level, mid-level, senior), and industry requirements.</li>
-                        <li><span class="font-bold text-blue-700">Define Clear Objectives:</span> Establish specific, measurable, achievable, relevant, and time-bound (SMART) learning objectives for each training program.</li>
-                        <li><span class="font-bold text-blue-700">Curriculum Development:</span> Create a comprehensive curriculum covering relevant HR functions, including recruitment, performance management, employee relations, compensation, and HRIS.</li>
-                    </ul>
+                <!-- Intro -->
+                <div class="text-center mb-12 animate-fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary-color mb-4">Our Mission: Bridging Talent and the Corporate World</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Our mission is to bridge the gap between talent and the corporate world. We provide practical, hands-on training to equip aspiring HR professionals with the job-ready skills needed to thrive from day one.</p>
                 </div>
-                <hr class="my-8 border-gray-200">
-                <!-- Practical Training and Delivery -->
-                <div class="mb-12 animate-fade-in-up">
-                    <div class="flex items-center mb-2">
-                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-600 font-bold mr-3 text-lg shadow">2</span>
-                        <h2 class="text-2xl md:text-3xl font-bold text-primary-color">Practical Training and Delivery</h2>
-                    </div>
-                    <ul class="list-disc pl-10 text-gray-700 mb-2 space-y-2">
-                        <li><span class="font-bold text-green-700">Hands-on Experience:</span> Emphasize practical application through case studies, simulations, role-playing exercises, and real-world projects.</li>
-                        <li><span class="font-bold text-green-700">Diverse Delivery Methods:</span> Utilize a variety of training methods, such as in-person workshops, online modules, blended learning approaches, and virtual reality simulations.</li>
-                        <li><span class="font-bold text-green-700">Expert Instructors:</span> Partner with experienced HR professionals and industry experts to deliver training and share their practical insights.</li>
-                    </ul>
-                </div>
-                <hr class="my-8 border-gray-200">
-                <!-- Ongoing Evaluation and Improvement -->
-                <div class="mb-12 animate-fade-in-up">
-                    <div class="flex items-center mb-2">
-                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-600 font-bold mr-3 text-lg shadow">3</span>
-                        <h2 class="text-2xl md:text-3xl font-bold text-primary-color">Ongoing Evaluation and Improvement</h2>
-                    </div>
-                    <ul class="list-disc pl-10 text-gray-700 mb-2 space-y-2">
-                        <li><span class="font-bold text-yellow-700">Feedback Mechanisms:</span> Implement feedback mechanisms to gather input from participants and identify areas for improvement.</li>
-                        <li><span class="font-bold text-yellow-700">Program Evaluation:</span> Regularly evaluate the effectiveness of training programs and make necessary adjustments to ensure they continue to meet the needs of HR professionals.</li>
-                        <li><span class="font-bold text-yellow-700">Continuous Improvement:</span> Foster a culture of continuous improvement within the institute by regularly updating training content, delivery methods, and resources.</li>
-                    </ul>
-                </div>
-                <hr class="my-8 border-gray-200">
-                <!-- Important Steps for Business Success -->
-                <div class="mb-12 animate-fade-in-up">
-                    <div class="flex items-center mb-2">
-                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 text-purple-600 font-bold mr-3 text-lg shadow"><i class="fas fa-lightbulb"></i></span>
-                        <h2 class="text-2xl md:text-3xl font-bold text-primary-color">Important Steps for Business Success</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="space-y-4">
-                            <div class="flex items-start bg-blue-50 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-blue-500"><i class="fas fa-bullseye"></i></span><div><h3 class="font-bold text-lg mb-1">1. Identify Your Niche</h3><p>Target specific audiences such as BBA/MBA/PGDBM students (HR Specializations), career coaches for management students, and freshers or experienced HR professionals looking to change their profile.</p></div></div>
-                            <div class="flex items-start bg-green-50 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-green-500"><i class="fas fa-search"></i></span><div><h3 class="font-bold text-lg mb-1">2. Conduct Market Research</h3><p>Analyze market demand, competition, and trends to identify opportunities and gaps in the HR training sector.</p></div></div>
-                            <div class="flex items-start bg-yellow-50 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-yellow-500"><i class="fas fa-file-alt"></i></span><div><h3 class="font-bold text-lg mb-1">3. Develop a Business Plan</h3><p>Create a roadmap detailing the company's direction, purpose, objectives, market analysis, product/service offerings, and promotion strategies.</p></div></div>
-                            <div class="flex items-start bg-pink-50 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-pink-500"><i class="fas fa-rupee-sign"></i></span><div><h3 class="font-bold text-lg mb-1">4. Decide on Your Pricing Model</h3><p>Determine pricing based on target audience, training type, hourly rates, session/unit costs, and consider bundles or discounts. Set reasonable rates reflecting expertise.</p></div></div>
-                            <div class="flex items-start bg-orange-50 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-orange-500"><i class="fas fa-book"></i></span><div><h3 class="font-bold text-lg mb-1">5. Create Training Materials</h3><p>Develop adaptable materials like video lectures, readings, assignments, and tests. Keep them concise, engaging with visuals and audio, and include evaluations. Update regularly.</p></div></div>
+
+                <!-- Why Choose Us -->
+                <div class="mb-16 animate-fade-in-up">
+                    <h3 class="text-2xl md:text-3xl font-bold text-center text-primary-color mb-8">Why Choose Our Program?</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                        <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <div class="text-blue-500 text-4xl mb-3"><i class="fas fa-briefcase"></i></div>
+                            <h4 class="font-bold text-lg mb-2">Job-Ready Skills</h4>
+                            <p class="text-gray-600">Focus on practical activities like drafting JDs, conducting mock interviews, and calculating salaries.</p>
                         </div>
-                        <div class="space-y-4">
-                            <div class="flex items-start bg-indigo-50 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-indigo-500"><i class="fas fa-globe"></i></span><div><h3 class="font-bold text-lg mb-1">6. Build Your Online Presence</h3><p>Establish a professional website, leverage social media, and use digital marketing to reach a wider audience and build credibility.</p></div></div>
-                            <div class="flex items-start bg-teal-50 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-teal-500"><i class="fas fa-laptop-code"></i></span><div><h3 class="font-bold text-lg mb-1">7. Utilize Technology</h3><p>Employ Learning Management Systems (LMS), video conferencing tools, course authoring tools, and online evaluation tools to enhance training quality and save time.</p></div></div>
-                            <div class="flex items-start bg-green-100 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-green-700"><i class="fas fa-rocket"></i></span><div><h3 class="font-bold text-lg mb-1">8. Launch Your Training</h3><p>Start by offering initial sessions at no or low cost to generate interest. Seek recommendations and feedback. Be flexible and open to change based on student input.</p></div></div>
-                            <div class="flex items-start bg-purple-100 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-purple-700"><i class="fas fa-hands-helping"></i></span><div><h3 class="font-bold text-lg mb-1">9. Provide Ongoing Support and Resources</h3><p>Offer post-training support and resources such as social media groups, forums, chat rooms, additional training materials, reading lists, and coaching/mentoring services.</p></div></div>
-                            <div class="flex items-start bg-yellow-100 rounded-xl p-4 shadow hover:shadow-lg transition duration-300"><span class="mr-3 text-yellow-700"><i class="fas fa-chart-line"></i></span><div><h3 class="font-bold text-lg mb-1">10. Measure and Improve Your Training</h3><p>Continuously evaluate and enhance training through surveys, feedback forms, and analytics. Track trainee happiness, skill retention, educational outcomes, and ROI.</p></div></div>
+                        <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" style="animation-delay: 100ms;">
+                            <div class="text-green-500 text-4xl mb-3"><i class="fas fa-landmark"></i></div>
+                            <h4 class="font-bold text-lg mb-2">India-Specific Content</h4>
+                            <p class="text-gray-600">Master Indian Labour Laws, including PF, ESI, Gratuity, and POSH.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" style="animation-delay: 200ms;">
+                            <div class="text-red-500 text-4xl mb-3"><i class="fas fa-rocket"></i></div>
+                            <h4 class="font-bold text-lg mb-2">Career-Focused</h4>
+                            <p class="text-gray-600">Built for HR Trainees, Interns, and Junior Executives to accelerate their careers.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300" style="animation-delay: 300ms;">
+                            <div class="text-purple-500 text-4xl mb-3"><i class="fas fa-cubes"></i></div>
+                            <h4 class="font-bold text-lg mb-2">Flexible & Modular</h4>
+                            <p class="text-gray-600">Adaptable for intensive workshops or comprehensive internship programs.</p>
                         </div>
                     </div>
                 </div>
-                <hr class="my-8 border-gray-200">
-                <!-- Company Aims / Executive Summary -->
-                <div class="mb-12 animate-fade-in-up">
-                    <div class="flex items-center mb-2">
-                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 text-gray-600 font-bold mr-3 text-lg shadow"><i class="fas fa-building"></i></span>
-                        <h2 class="text-2xl md:text-3xl font-bold text-primary-color">Company Aims / Executive Summary</h2>
+
+                <!-- Course Modules -->
+                <div class="mb-16 animate-fade-in-up">
+                    <h3 class="text-2xl md:text-3xl font-bold text-center text-primary-color mb-4">Course Modules: Your Path to HR Mastery</h3>
+                    <p class="text-center text-gray-600 mb-8">Click on any module to see the practical activities included!</p>
+                    <div class="space-y-4 max-w-4xl mx-auto" id="modules-accordion">
+                        <!-- Module 1 -->
+                        <div class="accordion-item bg-white rounded-lg shadow-md">
+                            <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-primary-color">
+                                <span>Module 1: The Foundation of Modern HR 🏛️</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="accordion-content hidden p-5 border-t border-gray-200">
+                                <p class="text-gray-700">Understand the strategic role of HR as a business partner. We'll cover the complete employee lifecycle, key HR metrics (like attrition and time-to-hire), and the structure of a high-performing HR department.</p>
+                            </div>
+                        </div>
+                        <!-- Module 2 -->
+                        <div class="accordion-item bg-white rounded-lg shadow-md">
+                            <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-primary-color">
+                                <span>Module 2: Mastering the Art of Talent Acquisition 🎯</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="accordion-content hidden p-5 border-t border-gray-200">
+                                <p class="text-gray-700 mb-3">Learn to attract and hire top talent. This module covers everything from writing compelling job descriptions and sourcing on platforms like LinkedIn and Naukri, to conducting interviews using the STAR method and rolling out offers.</p>
+                                <p class="font-bold text-green-600">Hands-on Practice: You'll screen real resumes and conduct mock interviews!</p>
+                            </div>
+                        </div>
+                        <!-- Module 3 -->
+                        <div class="accordion-item bg-white rounded-lg shadow-md">
+                            <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-primary-color">
+                                <span>Module 3: Seamless Employee Onboarding & Integration 👋</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="accordion-content hidden p-5 border-t border-gray-200">
+                                <p class="text-gray-700">First impressions matter. Master the art of making new hires feel welcome and prepared. You'll learn to manage all Day 1 formalities, create engaging induction programs, and fill out critical statutory forms (PF, ESIC, etc.).</p>
+                            </div>
+                        </div>
+                        <!-- Module 4 -->
+                        <div class="accordion-item bg-white rounded-lg shadow-md">
+                            <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-primary-color">
+                                <span>Module 4: Payroll & Indian Statutory Compliance 📜</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="accordion-content hidden p-5 border-t border-gray-200">
+                                <p class="text-gray-700 mb-3">Gain confidence in the most critical HR function. This deep dive covers the essentials of Indian law, including PF, ESI, Gratuity, and the Maternity Benefit Act. You'll also learn to structure a salary slip and understand CTC vs. in-hand salary.</p>
+                                <p class="font-bold text-green-600">Hands-on Practice: Calculate a complete salary breakup with all statutory deductions.</p>
+                            </div>
+                        </div>
+                         <!-- Module 5 -->
+                        <div class="accordion-item bg-white rounded-lg shadow-md">
+                            <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-primary-color">
+                                <span>Module 5: Performance Management & Employee Relations 🤝</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="accordion-content hidden p-5 border-t border-gray-200">
+                                <p class="text-gray-700">Learn how to nurture talent and build a positive work environment. We'll cover the end-to-end performance appraisal cycle, how to give constructive feedback, manage Performance Improvement Plans (PIPs), and handle employee grievances with empathy and professionalism.</p>
+                            </div>
+                        </div>
+                        <!-- Module 6 -->
+                        <div class="accordion-item bg-white rounded-lg shadow-md">
+                            <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-primary-color">
+                                <span>Module 6: Managing Data with HRIS 💻</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="accordion-content hidden p-5 border-t border-gray-200">
+                                <p class="text-gray-700">HR is a data-driven function. Get hands-on experience with Human Resources Information Systems (HRIS). You’ll learn to manage employee databases, process leave and attendance, and generate critical reports that drive business decisions.</p>
+                            </div>
+                        </div>
+                        <!-- Module 7 -->
+                        <div class="accordion-item bg-white rounded-lg shadow-md">
+                            <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-primary-color">
+                                <span>Module 7: Professional Employee Exits & Offboarding 🚪</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="accordion-content hidden p-5 border-t border-gray-200">
+                                <p class="text-gray-700">Manage employee departures with grace and efficiency. Learn to handle the resignation process, conduct effective exit interviews, calculate the Full and Final (F&F) settlement, and ensure a smooth clearance process.</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-gray-700 mb-2">Muster Consultant focuses on delivering practical, hands-on training that addresses real-world HR challenges. Our key points include conducting thorough needs assessments, developing targeted training programs, utilizing diverse delivery methods, emphasizing practical application, and building a strong reputation through quality training and positive word-of-mouth.</p>
-                    <p class="text-gray-700">We aim to effectively equip HR professionals with the skills and knowledge they need to succeed in today's dynamic business environment.</p>
                 </div>
-                <div class="text-center mt-12 animate-fade-in">
-                    <a href="contact.html" class="inline-block px-10 py-4 bg-gradient-to-r from-blue-600 to-green-500 text-white font-bold rounded-full shadow-lg hover:from-green-500 hover:to-blue-600 transition-all duration-300 text-xl animate-bounce">Get Started with Muster Consultants</a>
+
+                <!-- Capstone Project -->
+                <div class="mb-16 p-8 bg-gradient-to-r from-blue-600 to-green-500 text-white rounded-lg shadow-xl animate-fade-in-up text-center">
+                    <div class="text-5xl mb-4 text-yellow-300"><i class="fas fa-award"></i></div>
+                    <h3 class="text-3xl font-bold mb-4">Capstone Project: Become the HR Manager</h3>
+                    <p class="max-w-3xl mx-auto mb-6">Put your new skills to the test! In your final project, you will manage the entire lifecycle of a fictional employee.</p>
+                    <ul class="list-disc list-inside text-left max-w-md mx-auto space-y-2 mb-6">
+                        <li>Draft their Job Description.</li>
+                        <li>Create their Offer Letter and Salary Structure.</li>
+                        <li>Design their 1-week Onboarding Plan.</li>
+                        <li>Conduct their Performance Appraisal.</li>
+                        <li>Process their resignation and calculate the Final Settlement.</li>
+                    </ul>
+                    <p class="font-semibold">This project proves you have the integrated skills to walk into any HR department and add value immediately.</p>
+                </div>
+                
+                <!-- FAQs -->
+                <div class="animate-fade-in-up">
+                    <h3 class="text-2xl md:text-3xl font-bold text-center text-primary-color mb-8">Frequently Asked Questions (FAQs)</h3>
+                    <div class="space-y-4 max-w-3xl mx-auto" id="faq-accordion">
+                         <!-- FAQ 1 -->
+                        <div class="accordion-item bg-white rounded-lg shadow-md">
+                            <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800">
+                                <span>Who is this program for?</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="accordion-content hidden p-5 border-t border-gray-200">
+                                <p class="text-gray-700">This program is ideal for HR Trainees, Interns, Junior HR Executives, and anyone new to an HR role.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item bg-white rounded-lg shadow-md">
+                            <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800">
+                                <span>Is this program theoretical?</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="accordion-content hidden p-5 border-t border-gray-200">
+                                <p class="text-gray-700">No, it is 100% practical and action-oriented. Our motto is "Learn by Doing."</p>
+                            </div>
+                        </div>
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item bg-white rounded-lg shadow-md">
+                            <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800">
+                                <span>Will I learn about Indian labour laws?</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="accordion-content hidden p-5 border-t border-gray-200">
+                                <p class="text-gray-700">Absolutely. Module 4 is a deep dive into the critical statutory compliance requirements for companies in India.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item bg-white rounded-lg shadow-md">
+                            <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800">
+                                <span>Do I get a certificate?</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="accordion-content hidden p-5 border-t border-gray-200">
+                                <p class="text-gray-700">Yes, upon successful completion of the course and the capstone project, you will receive a Certificate of Completion.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -360,6 +468,46 @@ mobileAboutUsToggle.addEventListener('click', function() {
     mobileAboutUsCaret.classList.add('rotate-180');
   }
 });
+
+function setupAccordion(accordionId) {
+    const accordion = document.getElementById(accordionId);
+    if (!accordion) return;
+
+    const items = accordion.getElementsByClassName('accordion-item');
+
+    for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        const header = item.querySelector('.accordion-header');
+        const content = item.querySelector('.accordion-content');
+        const icon = header.querySelector('i');
+
+        header.addEventListener('click', function() {
+            const isOpen = !content.classList.contains('hidden');
+
+            if (isOpen) {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+                item.classList.remove('active');
+            } else {
+                // Close other items when one is opened
+                for (let j = 0; j < items.length; j++) {
+                    if (i !== j) {
+                        items[j].querySelector('.accordion-content').classList.add('hidden');
+                        items[j].querySelector('.accordion-header i').classList.remove('rotate-180');
+                        items[j].classList.remove('active');
+                    }
+                }
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+                item.classList.add('active');
+            }
+        });
+    }
+}
+
+setupAccordion('modules-accordion');
+setupAccordion('faq-accordion');
+
 
 const subscribeInput = document.querySelector('.footer-subscribe-input');
 const subscribeBtn = document.querySelector('.footer-subscribe-button');
