@@ -271,6 +271,7 @@
     </style>
 </head>
 <body class="bg-gray-50">
+<div id="globalMessageBox" class="global-message-box" style="display:none;position:fixed;top:0;left:0;width:100%;z-index:9999;text-align:center;padding:1em;font-weight:bold;"></div>
     <nav class="bg-white shadow-lg py-3 sm:py-4 navbar-animated">
         <div class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-12">
             <div class="flex items-center">
@@ -412,23 +413,13 @@ mobileAboutUsToggle.addEventListener('click', function() {
     <!-- Remove any form or section for uploading CV. Only keep the job openings and Google Form apply buttons. -->
 
     <!-- Current Job Openings Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6 md:px-12">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8 section-heading animated-section-heading text-center">Current Job Openings</h2>
-            <div class="flex flex-col md:flex-row md:space-x-8 md:space-y-0 space-y-8 max-w-4xl mx-auto justify-center items-stretch">
-                <div class="job-card relative bg-gradient-to-br from-white via-gray-50 to-green-50 rounded-2xl shadow-lg p-8 transition-transform transform hover:scale-105 hover:shadow-2xl border border-green-200 flex-1 flex flex-col items-start cursor-pointer overflow-hidden group" onclick="openModal('modal1')">
-                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-400 to-blue-500 rounded-t-2xl"></div>
-                    <span class="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md animate-pulse">Hot</span>
-                    <div class="text-4xl mb-3 text-primary-color transition-transform duration-300 group-hover:animate-bounce"><i class="fas fa-user-tie"></i></div>
-                    <h3 class="text-2xl font-semibold mb-1 text-primary-color">Sr. Key Account Manager</h3>
-                    <p class="text-gray-600 mb-2 italic">Lead key client relationships and drive business growth.</p>
-                    <p class="text-gray-700 mb-4">Check the job description and apply online.</p>
+    
                 </div>
                 <div class="job-card relative bg-gradient-to-br from-white via-gray-50 to-blue-50 rounded-2xl shadow-lg p-8 transition-transform transform hover:scale-105 hover:shadow-2xl border border-blue-200 flex-1 flex flex-col items-start cursor-pointer overflow-hidden group" onclick="openModal('modal2')">
                     <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 to-green-500 rounded-t-2xl"></div>
                     <span class="absolute top-4 right-4 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md animate-pulse">New</span>
                     <div class="text-4xl mb-3 text-primary-color transition-transform duration-300 group-hover:animate-bounce"><i class="fas fa-users"></i></div>
-                    <h3 class="text-2xl font-semibold mb-1 text-primary-color">Recruiter / Recruiter</h3>
+                    <h3 class="text-2xl font-semibold mb-1 text-primary-color">Recruiter /HR Recruiter</h3>
                     <p class="text-gray-600 mb-2 italic">Source, screen, and place top talent for our clients.</p>
                     <p class="text-gray-700 mb-4">Check the job description and apply online.</p>
                 </div>
@@ -436,31 +427,7 @@ mobileAboutUsToggle.addEventListener('click', function() {
         </div>
     </section>
 
-    <!-- Modal for Sr. Key Account Manager -->
-    <div id="modal1" class="job-modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
-        <div class="bg-white rounded-xl shadow-lg max-w-lg w-full p-8 relative animate-fadeIn">
-            <button onclick="closeModal('modal1')" class="absolute top-4 right-4 text-gray-500 hover:text-primary-color text-2xl font-bold">&times;</button>
-            <div class="text-4xl mb-3 text-primary-color"><i class="fas fa-user-tie"></i></div>
-            <h3 class="text-2xl font-semibold mb-1 text-primary-color">Sr. Key Account Manager</h3>
-            <p class="text-gray-600 mb-2 italic">Lead key client relationships and drive business growth.</p>
-            <div class="text-gray-700 mb-4 text-left">
-                <strong>Responsibilities:</strong>
-                <ul class="list-disc ml-6 mb-2">
-                    <li>Manage and grow key client accounts.</li>
-                    <li>Develop business strategies and proposals.</li>
-                    <li>Coordinate with internal teams for client delivery.</li>
-                    <li>Meet revenue and relationship targets.</li>
-                </ul>
-                <strong>Requirements:</strong>
-                <ul class="list-disc ml-6">
-                    <li>MBA or equivalent preferred.</li>
-                    <li>5+ years in key account management or sales.</li>
-                    <li>Excellent communication and negotiation skills.</li>
-                </ul>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUD-xRnH5CD3VoMmrXdMQPr7rcki4Pj9A_vXi2HJKME5jCBw/viewform?usp=header" target="_blank" rel="noopener" class="inline-block bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold px-8 py-2 rounded-full shadow-lg hover:from-green-500 hover:to-blue-600 transition-all duration-300 animate-pulse mt-2">Apply</a>
-        </div>
-    </div>
+
 
     <!-- Modal for Recruiter / Recruiter -->
     <div id="modal2" class="job-modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
@@ -480,7 +447,7 @@ mobileAboutUsToggle.addEventListener('click', function() {
                 <strong>Requirements:</strong>
                 <ul class="list-disc ml-6">
                     <li>Bachelor's degree or equivalent.</li>
-                    <li>1+ years in recruitment or HR.</li>
+                    <li>6+ months in recruitment or HR.</li>
                     <li>Strong communication and organizational skills.</li>
                 </ul>
             </div>
