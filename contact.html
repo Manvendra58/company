@@ -363,12 +363,12 @@ mobileAboutUsToggle.addEventListener('click', function() {
                         });
                         if (res.ok) {
                             form.reset();
-                            document.getElementById('success-message').classList.remove('hidden');
+                            showGlobalMessage('Thank you! Your message has been sent.', 'success');
                         } else {
-                            alert('There was an error sending your message.');
+                            showGlobalMessage('There was an error sending your message.', 'error');
                         }
                     } catch (err) {
-                        alert('There was an error sending your message.');
+                        showGlobalMessage('There was an error sending your message.', 'error');
                     }
                     btn.disabled = false;
                     btn.textContent = 'Send Message';

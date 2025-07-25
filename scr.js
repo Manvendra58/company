@@ -989,23 +989,37 @@ document.addEventListener('DOMContentLoaded', function() {
         const subscribeButton = document.querySelector('.footer-subscribe-button');
         
         if (subscribeForm && subscribeButton) {
-            subscribeButton.addEventListener('click', function(e) {
+            subscribeButton.addEventListener('click', async function(e) {
                 e.preventDefault();
                 const email = subscribeForm.value.trim();
                 
                 if (!email) {
-                    showNotification('Please enter your email address', 'error');
+                    showGlobalMessage('Please enter your email address', 'error');
                     return;
                 }
                 
                 if (!isValidEmail(email)) {
-                    showNotification('Please enter a valid email address', 'error');
+                    showGlobalMessage('Please enter a valid email address', 'error');
                     return;
                 }
                 
-                // Simulate subscription
-                showNotification('Thank you for subscribing!', 'success');
-                subscribeForm.value = '';
+                subscribeButton.disabled = true;
+                try {
+                    const res = await fetch('http://localhost:5000/api/subscribe', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email })
+                    });
+                    if (res.ok) {
+                        subscribeForm.value = '';
+                        showGlobalMessage('Thank you for subscribing!', 'success');
+                    } else {
+                        showGlobalMessage('There was an error subscribing.', 'error');
+                    }
+                } catch (err) {
+                    showGlobalMessage('There was an error subscribing.', 'error');
+                }
+                subscribeButton.disabled = false;
             });
         }
 
@@ -1107,23 +1121,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const subscribeButton = document.querySelector('.footer-subscribe-button');
     
     if (subscribeForm && subscribeButton) {
-        subscribeButton.addEventListener('click', function(e) {
+        subscribeButton.addEventListener('click', async function(e) {
             e.preventDefault();
             const email = subscribeForm.value.trim();
             
             if (!email) {
-                showNotification('Please enter your email address', 'error');
+                showGlobalMessage('Please enter your email address', 'error');
                 return;
             }
             
             if (!isValidEmail(email)) {
-                showNotification('Please enter a valid email address', 'error');
+                showGlobalMessage('Please enter a valid email address', 'error');
                 return;
             }
             
-            // Simulate subscription
-            showNotification('Thank you for subscribing!', 'success');
-            subscribeForm.value = '';
+            subscribeButton.disabled = true;
+            try {
+                const res = await fetch('http://localhost:5000/api/subscribe', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email })
+                });
+                if (res.ok) {
+                    subscribeForm.value = '';
+                    showGlobalMessage('Thank you for subscribing!', 'success');
+                } else {
+                    showGlobalMessage('There was an error subscribing.', 'error');
+                }
+            } catch (err) {
+                showGlobalMessage('There was an error subscribing.', 'error');
+            }
+            subscribeButton.disabled = false;
         });
     }
 
