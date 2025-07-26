@@ -9,6 +9,80 @@
     --footer-bg-color: #2c3e50; /* Dark blue-gray for footer */
 }
 
+/* CV Upload Floating Icon Styles */
+.cv-upload-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(22, 163, 74, 0.3);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    animation: bounce-slow 2s infinite;
+}
+
+.cv-upload-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(22, 163, 74, 0.4);
+    background: var(--primary-dark);
+}
+
+.cv-upload-icon i {
+    color: white;
+    font-size: 28px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cv-upload-icon:hover i {
+    transform: scale(1.1);
+}
+
+/* Global Message Box Styles */
+.global-message-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    text-align: center;
+    padding: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #28A745;
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.global-message-box.show {
+    transform: translateY(0);
+}
+
+.global-message-box.error {
+    background-color: #DC3545;
+}
+
+/* Responsive adjustments for CV upload icon */
+@media (max-width: 768px) {
+    .cv-upload-icon {
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .cv-upload-icon i {
+        font-size: 24px;
+    }
+}
+
 /* Base Body Styles */
 body {
     font-family: 'Inter', sans-serif;

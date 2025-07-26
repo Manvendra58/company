@@ -413,47 +413,147 @@ mobileAboutUsToggle.addEventListener('click', function() {
     <!-- Remove any form or section for uploading CV. Only keep the job openings and Google Form apply buttons. -->
 
     <!-- Current Job Openings Section -->
-    
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 section-heading animated-section-heading">Current Job Openings</h2>
+                <p class="text-lg text-gray-600 animated-paragraph">Explore exciting career opportunities with Muster Consultants</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Relationship Officer -->
+                <div class="job-card relative bg-gradient-to-br from-white via-gray-50 to-blue-50 rounded-2xl shadow-lg p-8 transition-transform transform hover:scale-105 hover:shadow-2xl border border-blue-200 flex-1 flex flex-col items-start cursor-pointer overflow-hidden group" onclick="openModal('modal1')">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 to-green-500 rounded-t-2xl"></div>
+                    <span class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md animate-pulse">Urgent</span>
+                    <div class="text-4xl mb-3 text-primary-color transition-transform duration-300 group-hover:animate-bounce"><i class="fas fa-handshake"></i></div>
+                    <h3 class="text-xl font-semibold mb-1 text-primary-color">Relationship Officer</h3>
+                    <p class="text-gray-600 mb-2 italic">Build and maintain client relationships</p>
+                    <p class="text-gray-700 mb-4">Check the job description and apply online.</p>
                 </div>
+
+                <!-- Relationship Manager -->
                 <div class="job-card relative bg-gradient-to-br from-white via-gray-50 to-blue-50 rounded-2xl shadow-lg p-8 transition-transform transform hover:scale-105 hover:shadow-2xl border border-blue-200 flex-1 flex flex-col items-start cursor-pointer overflow-hidden group" onclick="openModal('modal2')">
                     <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 to-green-500 rounded-t-2xl"></div>
                     <span class="absolute top-4 right-4 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md animate-pulse">New</span>
+                    <div class="text-4xl mb-3 text-primary-color transition-transform duration-300 group-hover:animate-bounce"><i class="fas fa-user-tie"></i></div>
+                    <h3 class="text-xl font-semibold mb-1 text-primary-color">Relationship Manager</h3>
+                    <p class="text-gray-600 mb-2 italic">Lead client relationships and business development</p>
+                    <p class="text-gray-700 mb-4">Check the job description and apply online.</p>
+                </div>
+
+                <!-- Sales Manager -->
+                <div class="job-card relative bg-gradient-to-br from-white via-gray-50 to-blue-50 rounded-2xl shadow-lg p-8 transition-transform transform hover:scale-105 hover:shadow-2xl border border-blue-200 flex-1 flex flex-col items-start cursor-pointer overflow-hidden group" onclick="openModal('modal3')">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 to-green-500 rounded-t-2xl"></div>
+                    <span class="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md animate-pulse">Hot</span>
+                    <div class="text-4xl mb-3 text-primary-color transition-transform duration-300 group-hover:animate-bounce"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-xl font-semibold mb-1 text-primary-color">Sales Manager</h3>
+                    <p class="text-gray-600 mb-2 italic">Drive sales growth and team performance</p>
+                    <p class="text-gray-700 mb-4">Check the job description and apply online.</p>
+                </div>
+
+                <!-- Recruiter/HR Recruiter -->
+                <div class="job-card relative bg-gradient-to-br from-white via-gray-50 to-blue-50 rounded-2xl shadow-lg p-8 transition-transform transform hover:scale-105 hover:shadow-2xl border border-blue-200 flex-1 flex flex-col items-start cursor-pointer overflow-hidden group" onclick="openModal('modal4')">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 to-green-500 rounded-t-2xl"></div>
+                    <span class="absolute top-4 right-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md animate-pulse">Open</span>
                     <div class="text-4xl mb-3 text-primary-color transition-transform duration-300 group-hover:animate-bounce"><i class="fas fa-users"></i></div>
-                    <h3 class="text-2xl font-semibold mb-1 text-primary-color">Recruiter /HR Recruiter</h3>
-                    <p class="text-gray-600 mb-2 italic">Source, screen, and place top talent for our clients.</p>
+                    <h3 class="text-xl font-semibold mb-1 text-primary-color">Recruiter / HR Recruiter</h3>
+                    <p class="text-gray-600 mb-2 italic">Source, screen, and place top talent for our clients</p>
                     <p class="text-gray-700 mb-4">Check the job description and apply online.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Modal for Relationship Officer -->
+    <div id="modal1" class="job-modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white rounded-xl shadow-lg max-w-lg w-full p-8 relative animate-fadeIn">
+            <button onclick="closeModal('modal1')" class="absolute top-4 right-4 text-gray-500 hover:text-primary-color text-2xl font-bold">&times;</button>
+            <div class="text-4xl mb-3 text-primary-color"><i class="fas fa-handshake"></i></div>
+            <h3 class="text-2xl font-semibold mb-1 text-primary-color">Relationship Officer</h3>
+            <p class="text-gray-600 mb-2 italic">Build and maintain client relationships</p>
+            <div class="text-gray-700 mb-4 text-left">
+                <strong>Requirements:</strong>
+                <ul class="list-disc ml-6">
+                    <li>Bachelor's degree in Business, Marketing, or related field</li>
+                    <li>1-2 years of experience in client relationship management</li>
+                    <li>Excellent communication and interpersonal skills</li>
+                    <li>Strong problem-solving and analytical abilities</li>
+                    <li>Proficiency in MS Office and CRM tools</li>
+                </ul>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUD-xRnH5CD3VoMmrXdMQPr7rcki4Pj9A_vXi2HJKME5jCBw/viewform?usp=header" target="_blank" rel="noopener" class="inline-block bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold px-8 py-2 rounded-full shadow-lg hover:from-green-500 hover:to-blue-600 transition-all duration-300 animate-pulse mt-2">Apply Now</a>
+        </div>
+    </div>
 
-
-    <!-- Modal for Recruiter / Recruiter -->
+    <!-- Modal for Relationship Manager -->
     <div id="modal2" class="job-modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
         <div class="bg-white rounded-xl shadow-lg max-w-lg w-full p-8 relative animate-fadeIn">
             <button onclick="closeModal('modal2')" class="absolute top-4 right-4 text-gray-500 hover:text-primary-color text-2xl font-bold">&times;</button>
-            <div class="text-4xl mb-3 text-primary-color"><i class="fas fa-users"></i></div>
-            <h3 class="text-2xl font-semibold mb-1 text-primary-color">Recruiter / Recruiter</h3>
-            <p class="text-gray-600 mb-2 italic">Source, screen, and place top talent for our clients.</p>
+            <div class="text-4xl mb-3 text-primary-color"><i class="fas fa-user-tie"></i></div>
+            <h3 class="text-2xl font-semibold mb-1 text-primary-color">Relationship Manager</h3>
+            <p class="text-gray-600 mb-2 italic">Lead client relationships and business development</p>
             <div class="text-gray-700 mb-4 text-left">
-                <strong>Responsibilities:</strong>
-                <ul class="list-disc ml-6 mb-2">
-                    <li>Source and screen candidates for various roles.</li>
-                    <li>Coordinate interviews and feedback with clients.</li>
-                    <li>Maintain candidate database and reports.</li>
-                    <li>Ensure a positive candidate experience.</li>
-                </ul>
                 <strong>Requirements:</strong>
                 <ul class="list-disc ml-6">
-                    <li>Bachelor's degree or equivalent.</li>
-                    <li>6+ months in recruitment or HR.</li>
-                    <li>Strong communication and organizational skills.</li>
+                    <li>Bachelor's degree in Business, Marketing, or related field</li>
+                    <li>3-5 years of experience in relationship management</li>
+                    <li>Proven track record of client retention and growth</li>
+                    <li>Strong leadership and team management skills</li>
+                    <li>Excellent negotiation and presentation skills</li>
+                    <li>Experience in the recruitment/HR industry preferred</li>
                 </ul>
             </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUD-xRnH5CD3VoMmrXdMQPr7rcki4Pj9A_vXi2HJKME5jCBw/viewform?usp=header" target="_blank" rel="noopener" class="inline-block bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold px-8 py-2 rounded-full shadow-lg hover:from-green-500 hover:to-blue-600 transition-all duration-300 animate-pulse mt-2">Apply</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUD-xRnH5CD3VoMmrXdMQPr7rcki4Pj9A_vXi2HJKME5jCBw/viewform?usp=header" target="_blank" rel="noopener" class="inline-block bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold px-8 py-2 rounded-full shadow-lg hover:from-green-500 hover:to-blue-600 transition-all duration-300 animate-pulse mt-2">Apply Now</a>
         </div>
     </div>
+
+    <!-- Modal for Sales Manager -->
+    <div id="modal3" class="job-modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white rounded-xl shadow-lg max-w-lg w-full p-8 relative animate-fadeIn">
+            <button onclick="closeModal('modal3')" class="absolute top-4 right-4 text-gray-500 hover:text-primary-color text-2xl font-bold">&times;</button>
+            <div class="text-4xl mb-3 text-primary-color"><i class="fas fa-chart-line"></i></div>
+            <h3 class="text-2xl font-semibold mb-1 text-primary-color">Sales Manager</h3>
+            <p class="text-gray-600 mb-2 italic">Drive sales growth and team performance</p>
+            <div class="text-gray-700 mb-4 text-left">
+                
+                <strong>Requirements:</strong>
+                <ul class="list-disc ml-6">
+                    <li>Bachelor's degree in Business, Sales, or related field</li>
+                    <li>2+ years of experience in sales management</li>
+                    <li>Proven track record of meeting/exceeding sales targets</li>
+                    <li>Strong leadership and team management skills</li>
+                    <li>Excellent communication and negotiation skills</li>
+                    <li>Experience in B2B sales preferred</li>
+                    <li>Proficiency in CRM and sales analytics tools</li>
+                </ul>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUD-xRnH5CD3VoMmrXdMQPr7rcki4Pj9A_vXi2HJKME5jCBw/viewform?usp=header" target="_blank" rel="noopener" class="inline-block bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold px-8 py-2 rounded-full shadow-lg hover:from-green-500 hover:to-blue-600 transition-all duration-300 animate-pulse mt-2">Apply Now</a>
+        </div>
+    </div>
+
+    <!-- Modal for Recruiter/HR Recruiter -->
+    <div id="modal4" class="job-modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white rounded-xl shadow-lg max-w-lg w-full p-8 relative animate-fadeIn">
+            <button onclick="closeModal('modal4')" class="absolute top-4 right-4 text-gray-500 hover:text-primary-color text-2xl font-bold">&times;</button>
+            <div class="text-4xl mb-3 text-primary-color"><i class="fas fa-users"></i></div>
+            <h3 class="text-2xl font-semibold mb-1 text-primary-color">Recruiter / HR Recruiter</h3>
+            <p class="text-gray-600 mb-2 italic">Source, screen, and place top talent for our clients</p>
+            <div class="text-gray-700 mb-4 text-left">
+                <strong>Requirements:</strong>
+                <ul class="list-disc ml-6">
+                    <li>Bachelor's degree in HR, Business, or related field</li>
+                    <li>6+ months experience in recruitment or HR</li>
+                    <li>Strong communication and organizational skills</li>
+                    <li>Proficiency in recruitment tools and platforms</li>
+                    <li>Ability to work in a fast-paced environment</li>
+                    <li>Knowledge of employment laws and regulations</li>
+                </ul>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUD-xRnH5CD3VoMmrXdMQPr7rcki4Pj9A_vXi2HJKME5jCBw/viewform?usp=header" target="_blank" rel="noopener" class="inline-block bg-gradient-to-r from-blue-600 to-green-500 text-white font-semibold px-8 py-2 rounded-full shadow-lg hover:from-green-500 hover:to-blue-600 transition-all duration-300 animate-pulse mt-2">Apply Now</a>
+        </div>
+    </div>
+
+
 
     <script>
         function openModal(id) {

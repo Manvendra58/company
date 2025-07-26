@@ -686,6 +686,37 @@ function initServicesPage() {
     // would go here.
 }
 
+// --- CV Upload Floating Icon and Modal Functionality ---
+
+/**
+ * Sets up the CV upload floating icon that opens Google Form
+ */
+function setupCVUploadIcon() {
+    // Create the floating CV upload icon
+    const cvUploadIcon = document.createElement('div');
+    cvUploadIcon.className = 'cv-upload-icon';
+    cvUploadIcon.innerHTML = '<i class="fas fa-file-upload"></i>';
+    cvUploadIcon.title = 'Upload Your CV - Apply Now';
+    document.body.appendChild(cvUploadIcon);
+
+    // Event listener to open Google Form in new tab
+    cvUploadIcon.addEventListener('click', function() {
+        // Google Form URL for CV upload
+        const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdUD-xRnH5CD3VoMmrXdMQPr7rcki4Pj9A_vXi2HJKME5jCBw/viewform?usp=header';
+        
+        // Open Google Form in new tab
+        window.open(googleFormUrl, '_blank', 'noopener,noreferrer');
+        
+        // Optional: Show a brief message that form is opening
+        showGlobalMessage('Opening CV upload form...', 'success', 1500);
+    });
+}
+
+// Initialize CV upload functionality when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    setupCVUploadIcon();
+});
+
 
 // --- Main Entry Point: DOMContentLoaded ---
 // Enhanced JavaScript for Muster Consultants Website
